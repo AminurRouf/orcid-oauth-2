@@ -1,0 +1,18 @@
+﻿@model RestSharp.IRestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body onload="prettyPrint()">
+<div>
+    <pre class="prettyprint lang-xml">  @Model.Content</pre>
+</div>
+</body>
+</html>
