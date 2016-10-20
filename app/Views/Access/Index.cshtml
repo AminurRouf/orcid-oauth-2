@@ -1,0 +1,14 @@
+﻿@model RestSharp.IRestResponse<OrcidOauth2.Models.Orcid>
+
+<div class="row">
+
+    <div class="col-lg-10">@Model.Data.Name Orcid Id Is: <label> @Model.Data.OrcidId</label>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.Data.OrcidId))
+{
+    <h5>Fetch read-limited data for @Model.Data.OrcidId using access token @Model.Data.AccessToken </h5>
+
+    @Html.ActionLink("Fetch", "FetchData", new {Model.Data.OrcidId, Model.Data.AccessToken}, new {@class = "btn btn-info"})
+}
