@@ -34,6 +34,7 @@ namespace OrcidOauth2.Controllers
 
         private static IRestResponse<Orcid> GetAuthorisationResponse(string code)
         {
+            var clientId = ConfigurationManager.AppSettings.Get("ClientId");
             var clientSecret = ConfigurationManager.AppSettings.Get("ClientSecret");
             var client = new RestClient("https://sandbox.orcid.org/oauth/token");
             var request = new RestRequest(Method.POST);
@@ -42,7 +43,7 @@ namespace OrcidOauth2.Controllers
             request.AddHeader("Accept", "application/json");
             request.AddHeader("Content-type", "application/x-www-form-urlencoded");
             request.AddParameter("grant_type", "authorization_code");
-            request.AddParameter("client_id", "APP-0OAKMAWE95F3SENM");
+            request.AddParameter("client_id", clientId);
             request.AddParameter("scope", "");
             request.AddParameter("grant_type", "authorization_code");
             IRestResponse<Orcid> response = client.Execute<Orcid>(request);
