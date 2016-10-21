@@ -4,7 +4,7 @@ It is a c# example of how to conduct a 3 legged oauth 2 sign in and retrieve rea
 
 ##Quick Setup
 - Clone or down the project on to your machine. 
-- Open app\oricd-oauth-2.csproj in Visual Studio.
+- Open oricd-oauth-2.sln in Visual Studio.
 - In web.config amend client-id and client-secret to your orcid client id and secret.
 - press F5 to run website. Navigate to home page. Click Log In (i.e Navigate to http://localhost:55247/Account/Login) 
 - Click the "Orcid" sign in button. This should take you to the Orcid "authorise" page.
