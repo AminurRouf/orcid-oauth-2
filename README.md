@@ -5,7 +5,7 @@ It is a c# example of how to conduct a 3 legged oauth 2 sign in and retrieve rea
 ##Quick Setup
 - Clone or down the project on to your machine. 
 - Open app\oricd-oauth-2.csproj in Visual Studio.
-- Amend client-id and client-secret to your orcid client id and secret.
+- In web.config amend client-id and client-secret to your orcid client id and secret.
 - press F5 to run website. Navigate to home page. Click Log In (i.e Navigate to http://localhost:55247/Account/Login) 
 - Click the "Orcid" sign in button. This should take you to the Orcid "authorise" page.
 - Sign in to your Orid account and press authorise. You should then be redirected to http://localhost:55247/access, where you can see your orcid details.
@@ -37,7 +37,7 @@ This project is configured to run in IIS express on http://localhost:55247/ .
 ###Web Config
 The web config holds four values within the app settings section  specific to Orcid api. These values must be changed to match your credentials as set up in the orcid sandbox.
 - This demo contains an "Access"  route which is where the user is redirected once they sign in to orcid. If you want change where you want to redirect the user to you must change the RedirectUri setting to match the redirect uri set up in orcid.
-- The AccessScope is set to read-limited. This can be changed depending on what operation you want to do and what permissions are granted on the orcid account. See [orcid docs](http://members.orcid.org/api/introduction-orcid-member-api) for more info.
+- The AccessScope is set to read-limited. This can be changed depending on what operation you want to do and what permissions are granted on the orcid account. See [orcid Scopes](http://members.orcid.org/api/orcid-scopes) for more info.
 - ClientId and  ClientSecret must be replaced with your credentials which would have been set up by you in the orcid sandbox test environment.
 
 Below are the four orcid specific configurable values in the web.config. You only need to provide ClientId and ClientSecret to run this app.
