@@ -272,3 +272,5 @@ __pycache__/
 
 ### VisualStudio Patch ###
 build/
+app/Web.Release.config
+.vs/orcid-oauth-2/v14/.suo

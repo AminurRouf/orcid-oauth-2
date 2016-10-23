@@ -2,12 +2,15 @@
 This is a demo MVC.net example of [ORCID](https://github.com/ORCID) oauth 2. 
 It is a c# example of how to conduct a 3 legged oauth 2 sign in and retrieve read-limited data from orcid.
 
+##Demo
+Click [here](http://orcidoauth2demo.azurewebsites.net/) to view the demo.
+
 ##Quick Setup
 - Clone or down the project on to your machine. 
 - Open oricd-oauth-2.sln in Visual Studio.
 - In web.config amend client-id and client-secret to your orcid client id and secret.
 - press F5 to run website. Navigate to home page. Click Log In (i.e Navigate to http://localhost:55247/Account/Login) 
-- Click the "Orcid" sign in button. This should take you to the Orcid "authorise" page.
+- Click the "Orcid" log in button. This should take you to the Orcid "authorise" page.
 - Sign in to your Orid account and press authorise. You should then be redirected to http://localhost:55247/access, where you can see your orcid details.
 - Press "Fetch" to view your "read-limited" orcid data.
 
@@ -48,7 +51,7 @@ Below are the four orcid specific configurable values in the web.config. You onl
     <add key="AccessScope" value="/read-limited" />
 
 
- ###Startup
+ ###Startup Auth
  When OwinAuthProviders is installed it creates a file Startup.Auth.cs . Within this class you enable the orcid sign in button which can be be accessed at http://localhost:55247/Account/Login.
 
 The orcid authorisation is set up as follows
