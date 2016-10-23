@@ -1,8 +1,36 @@
 ﻿@model RestSharp.IRestResponse<OrcidOauth2.Models.Orcid>
+@{
+    ViewBag.Title = "Orcid Token Data";
+}
+
+<h2>@ViewBag.Title.</h2>
 
 <div class="row">
 
-    <div class="col-lg-10">@Model.Data.Name Orcid Id Is: <label> @Model.Data.OrcidId</label>
+    <div class="col-lg-10">
+        <table class="table">
+            <tr>
+                <td> Name: </td>
+                <td> @Model.Data.Name </td>
+            </tr>
+            <tr>
+                <td> Id: </td>
+                <td> @Model.Data.OrcidId </td>
+            </tr>
+            <tr>
+                <td> Authorisation Token: </td>
+                <td> @Model.Data.AccessToken </td>
+            </tr>
+            <tr>
+                <td> Token Type: </td>
+                <td> @Model.Data.TokenType </td>
+            </tr>
+            <tr>
+                <td> Expiry Date: </td>
+                <td> @Model.Data.TokenExpiryDate </td>
+            </tr>
+        </table>
+     
     </div>
 </div>
 
