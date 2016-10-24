@@ -274,3 +274,4 @@ __pycache__/
 build/
 app/Web.Release.config
 .vs/orcid-oauth-2/v14/.suo
+app/Web.Release.config
