@@ -1,0 +1,218 @@
+﻿
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Elsevier Developer Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elsevier APIs Developer Portal">
+    <meta name="author" content="Elsevier">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="///getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-53431661-1', 'auto');
+	  ga('send', 'pageview');
+
+    </script>
+    <script src="///ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+</head>
+<body onload="formReset();return false;">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand active" href="/index.html"><span class="glyphicon glyphicon-home"></span><font face="times new roman" style="letter-spacing: 0px;"> ELSEVIER</font> Developers</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#legal" class="dropdown-toggle" data-toggle="dropdown">Overview<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/about.html">About APIs</a></li>
+                            <li><a href="/sc_apis.html">Scopus APIs</a></li>
+                            <li><a href="/sd_apis.html">ScienceDirect APIs</a></li>
+                            <li><a href="/ev_apis.html">Engineering Village APIs</a></li>
+                            <li><a href="/api_key_settings.html">Default API Key Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/policy.html">Use Policies</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/api_service_agreement.html">API Service Agreement</a></li>
+                            <li><a href="/tdm_service_agreement.html">TDM Service Agreement</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#usecases" class="dropdown-toggle" data-toggle="dropdown">Use Cases <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/academic_research_scopus.html">Academic Research</a></li>
+                            <li><a href="/federated_search.html">Federated Search</a></li>
+                            <li><a href="/ir_cris_vivo.html">IR/CRIS/VIVO</a></li>
+                            <li><a href="/cited_by_scopus.html">Cited by in Scopus</a></li>
+                            <li><a href="/sd_article_info.html">ScienceDirect article info</a></li>
+                            <li><a href="/sd_journal_info.html">ScienceDirect journal info</a></li>
+                            <li><a href="/ev_search_retrieval.html">Engineering Village</a></li>
+                            <li><a href="/journal_metrics.html">Journal Metrics</a></li>
+                            <li><a href="/text_mining.html">Text Mining</a></li>
+                            <li><a href="/commercial_scopus.html">Commercial Use</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/technical_documentation.html">How To Guides</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#explore" class="dropdown-toggle" data-toggle="dropdown">Explore<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/search.html">Interactive Search APIs</a></li>
+                            <li><a href="/retrieval.html">Interactive Retrieval APIs</a></li>
+                            <li><a href="/metadata.html">Interactive Metadata APIs</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/cors_examples.html">CORS Search Examples</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/html_widgets.html" target="_blank">HTML Widgets</a></li>
+                            <!-- 						  <li class="divider"></li> -->
+                            <!-- 						  <li><a href="https://github.com/ElsevierDev/elsapy" target="_blank">Python SDK</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/user/login"><b>My API key</b></a></li>
+                    <!--  <li><a href="/myapikey.html"><b>My API key</b></a></li>-->
+                    <li><a href="/api_docs.html"><b>API Specification</b></a></li>
+                </ul>
+
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <!-- MAIN CONTENT GOES HERE -->
+    <div class="container">
+        <!-- Please do not put content here. Instead create a file with content of this div in the "content" folder. -->
+        <!-- use SSI include directive to include content here -->
+        <script>
+var xsl="";
+var xml="";
+var key = "7804b8bef2d4dc6e5a85ef2dfb84a87c";
+
+function loadXMLDoc(dname) {
+	if (window.ActiveXObject) {
+  		xhttp=new ActiveXObject("Msxml2.XMLHTTP.3.0");
+  	}
+	else {
+  		xhttp=new XMLHttpRequest();
+  	}
+
+	xhttp.open("GET",dname,false);
+	xhttp.send("");
+	return xhttp.responseXML;
+}
+
+function displayResult() {
+    debugger;
+	xml="";
+	document.getElementById("sc_results").innerHTML="";
+
+var x = document.getElementById("form1");
+var val = x.elements[0].value;
+
+var apiReq="//api.elsevier.com/content/search/scopus?query=all("+val+")&sort=coverDate&count=25&apiKey="+key+"&view=standard&xml-decode=true&httpAccept=application%2Fxml";
+
+if (xsl == "") {
+	xsl=loadXMLDoc("/Xsl/publication.xsl");
+}
+
+xml=loadXMLDoc(apiReq);
+
+// code for IE
+if (window.ActiveXObject)
+  {
+	var ex='';
+  ex=xml.transformNode(xsl);
+  document.getElementById("sc_results").innerHTML=ex;
+  }
+// code for Mozilla, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor=new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  xsltProcessor.setParameter(null, "apikey", key);
+  resultDocument = xsltProcessor.transformToFragment(xml,document);
+  document.getElementById("sc_results").appendChild(resultDocument);
+  }
+
+}
+
+function formReset() {
+	document.getElementById("form1").reset();
+}
+
+function displayPage(link) {
+    debugger;
+	xml="";
+	document.getElementById("sc_results").innerHTML="";
+
+var apiReq=link;
+
+if (xsl == "") {
+	xsl=loadXMLDoc("/Xsl/publication.xsl");
+}
+
+xml=loadXMLDoc(apiReq);
+
+// code for IE
+if (window.ActiveXObject)
+  {
+	var ex='';
+  ex=xml.transformNode(xsl);
+  document.getElementById("sc_results").innerHTML=ex;
+  }
+// code for Mozilla, Firefox, Opera, etc.
+else if (document.implementation && document.implementation.createDocument)
+  {
+  xsltProcessor=new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  xsltProcessor.setParameter(null, "apikey", key);
+
+  resultDocument = xsltProcessor.transformToFragment(xml,document);
+  document.getElementById("sc_results").appendChild(resultDocument);
+  }
+
+}
+        </script>
+
+        <h2>Elsevier Scopus Search via API</h2>
+        <form id="form1" onkeypress="return event.keyCode != 13;">
+            <b>Please enter search keywords separated by space:</b>&nbsp;<input type="text" name="query" style="width:200px" />
+        </form>
+        <input type="submit" class="btn btn-info" onclick="displayResult();return false;" value="Search Scopus" />
+        <br /><br />
+
+        <div id="sc_results"></div>
+        <br />
+
+    </div> <!-- container -->
+    <!-- Bootstrap core JavaScript -->
+    <!-- include jQuery FIRST -->
+    <!--<script src="///ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <script src="///netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

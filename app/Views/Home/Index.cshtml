@@ -1,15 +1,44 @@
 ﻿@{
     ViewBag.Title = "Home Page ";
+    
 }
+<style>
+    a#connect-orcid-link {
+        cursor: pointer;
+        color: #999;
+    }
+
+        a#connect-orcid-link:hover {
+            color: #338caf;
+        }
+
+    #orcid-id-logo {
+        display: block;
+        margin: 0 .5em 0 0;
+        padding: 0;
+        float: left;
+    }
+
+    #orcid-icon {
+        color: #A6CE39;
+    }
+</style>
 
 <div class="jumbotron">
     <h1>Orcid oauth 2 demo</h1>
     <p class="lead"></p>
-    @Html.ActionLink("Go to log in page", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class="btn btn-info"})
+    ORCID is an independent non-profit effort to provide an open registry of unique researcher identifiers and open services to link research activities and organizations to these identifiers. Learn more at orcid.org .
+
+    <br />
+
+
+
 </div>
+
+<a id="connect-orcid-link" href='@ViewBag.Href'><i class="ai ai-orcid" id="orcid-icon"></i>Create or Connect your ORCID iD</a>
 <div class="row">
     <p>To run this demo it is assumed that you have created an orcid sandbox account using the instructions provided at <a href="https://github.com/alainna/vala2016">ORCID Boot Camp</a>.</p>
-    <p>From the log in page press "Orcid" log in button which should take you to the orcid sandbox authorisation page. </p>
+    <p>Click the connect link which should take you to the orcid sandbox authorisation page. </p>
     <p>Enter your username and password and press authorise.</p>
     <p>You should be redirected back to the "Access" page on this web site with an authorisation token. (You should store this code in database in a production enviroment).</p>
     <p>Click "Fetch" and you should be able to view the orcid data stored in your orcid account in an xml format.</p>

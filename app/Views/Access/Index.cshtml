@@ -5,6 +5,47 @@
 
 <h2>@ViewBag.Title.</h2>
 
+<style>
+    a#connect-orcid-link {
+        cursor: pointer;
+        color: #999;
+    }
+
+        a#connect-orcid-link:hover {
+            color: #338caf;
+        }
+
+    #orcid-id-logo {
+        display: block;
+        margin: 0 .5em 0 0;
+        padding: 0;
+        float: left;
+    }
+
+    #orcid-icon {
+        color: #A6CE39;
+    }
+</style>
+
+@if (!string.IsNullOrEmpty(@Model.Data.OrcidId))
+{
+    <div class="alert alert-success">
+
+        <p> You have successfully authorised access to your ORCID account. </p>
+        <a href='https://sandbox.orcid.org/@Model.Data.OrcidId'><i class="ai ai-orcid" id="orcid-icon"></i> https://sandbox.orcid.org/@Model.Data.OrcidId </a>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">
+
+        <p> You have NOT authorised access to your ORCID account. This may because.... </p>
+    
+    </div>
+}
+
+
+
 <div class="row">
 
     <div class="col-lg-10">
@@ -30,7 +71,7 @@
                 <td> @Model.Data.TokenExpiryDate </td>
             </tr>
         </table>
-     
+
     </div>
 </div>
 
@@ -38,5 +79,5 @@
 {
     <h5>Fetch read-limited data for @Model.Data.OrcidId using access token @Model.Data.AccessToken </h5>
 
-    @Html.ActionLink("Fetch", "FetchData", new {Model.Data.OrcidId, Model.Data.AccessToken}, new {@class = "btn btn-info"})
+    @Html.ActionLink("Fetch", "FetchData", new { Model.Data.OrcidId, Model.Data.AccessToken }, new { @class = "btn btn-info" })
 }
