@@ -24,7 +24,7 @@ namespace OrcidOauth2.Controllers
          
         private static IRestResponse GetOrcidData(string orcidId, string accessToken)
         {
-            var clientFetchData = new RestClient("https://api.sandbox.orcid.org/v1.2/" + orcidId + "/orcid-profile");
+            var clientFetchData = new RestClient("https://api.sandbox.orcid.org/v2.1/" + orcidId + "/orcid-profile");
             var requestOrcidRecord = new RestRequest(Method.GET);
             requestOrcidRecord.AddHeader("Content-Type", "application/vdn.orcid+xml");
             requestOrcidRecord.AddHeader("Authorization", "bearer " + accessToken);

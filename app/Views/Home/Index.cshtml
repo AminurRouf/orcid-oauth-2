@@ -5,7 +5,7 @@
 <style>
     a#connect-orcid-link {
         cursor: pointer;
-        color: #999;
+        color: #428bca;
     }
 
         a#connect-orcid-link:hover {
@@ -25,21 +25,38 @@
 </style>
 
 <div class="jumbotron">
-    <h1>Orcid oauth 2 demo</h1>
+    <h1>Collect & Connect:  ORCID Intergration Demo</h1>
     <p class="lead"></p>
-    ORCID is an independent non-profit effort to provide an open registry of unique researcher identifiers and open services to link research activities and organizations to these identifiers. Learn more at orcid.org .
-
+    ORCID is an independent non-profit effort to provide an open registry of unique researcher identifiers and open services to link research activities and organizations to these identifiers. Learn more at <a href="https://orcid.org">ORCID</a>.
+    
     <br />
 
-
+    <a id="connect-orcid-link" href='@ViewBag.Href'><i class="ai ai-orcid" id="orcid-icon"></i>Create or Connect to your ORCID iD</a>
 
 </div>
 
-<a id="connect-orcid-link" href='@ViewBag.Href'><i class="ai ai-orcid" id="orcid-icon"></i>Create or Connect your ORCID iD</a>
+
+<div class=""row>
+    <ul>
+        <li>Click on the Ceate or Connect ORCID link above to either verify your ORCID id or to create one.</li>
+        <li>Clicking on the link will take you to ORCID authentication page. </li>
+        <li>You should enter your existing ORCID username and password or create a new ORCID account.</li>
+        <li>Once you are logged in, ORCID will ask you to authorise THIS application to obtain your authenticted ORCID details.</li>
+        <li>Click accept and this will bring you back to this application which will display your ORCID id as well as a some authentication information. </li>
+        <li>This information will be stored in our database against your record.</li>
+        <li>In the unlikely case that you have linked to the wrong ORCID id, you can remove your ORCID id from our system by visiting the "delete" page or contact help desk.</li>
+
+
+    </ul>
+   
+</div>
+
+
 <div class="row">
     <p>To run this demo it is assumed that you have created an orcid sandbox account using the instructions provided at <a href="https://github.com/alainna/vala2016">ORCID Boot Camp</a>.</p>
-    <p>Click the connect link which should take you to the orcid sandbox authorisation page. </p>
-    <p>Enter your username and password and press authorise.</p>
-    <p>You should be redirected back to the "Access" page on this web site with an authorisation token. (You should store this code in database in a production enviroment).</p>
-    <p>Click "Fetch" and you should be able to view the orcid data stored in your orcid account in an xml format.</p>
+    <p>Clicking on the connect link  should take you to the orcid sandbox authorisation page. </p>
+    <p>Code for this demo can be viewed in <a href="https://github.com/AminurRouf/orcid-oauth-2">Github</a>  </p>
+    <p>This demo example is referenced in <a href="https://members.orcid.org/api/resources/code-examples">ORCID code examples page.</a>  </p>
+
+
 </div>
